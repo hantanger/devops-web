@@ -3,7 +3,7 @@ FROM node:16.16.0 AS build
 WORKDIR /app
 COPY package*.json /app/
 RUN npm install --legacy-peer-deps
-#RUN npm config set registry  https://nexus.qjdchina.com/nexus/repository/npm/  && npm install --legacy-peer-deps
+#RUN npm config set registry https://nexus.qjdchina.com/nexus/repository/npm/  && npm install --legacy-peer-deps
 ADD . /app
 RUN npm run build:beta
 
